@@ -41,10 +41,10 @@ module desk(width) {
         }
     
     translate([0, 0, 195])
-        shelfwithsupport(120, 40);
+        shelfwithsupport(120, 50);
 
     translate([0, 0, 235 - 9.8])
-        shelfwithsupport(120, 40);
+        shelfwithsupport(120, 50);
 
     translate([0, 0, 109])
         cube([120, 25, 1]);

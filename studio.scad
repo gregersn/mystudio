@@ -4,7 +4,7 @@ use <shelves.scad>;
 
 // Floor
 translate([0, 0, -1])
-    %cube([352, 340, 1]);
+    %cube([352, 348, 1]);
 
 // Wall
 translate([0, -1, 0])
@@ -13,7 +13,22 @@ translate([0, -1, 0])
 
 translate([352, 0, 0])
     rotate([0, 0, 90])
-            %cube([175, 1, 256]);
+        %difference() {
+            cube([348, 1, 256]);
+            translate([175, -1, 0])
+                cube([80, 5, 200]);
+        }
+
+translate([0, 0, 0])
+    rotate([0, 0, 90])
+        %difference() {
+            cube([348, 1, 256]);
+            translate([10, -1, 94])
+                cube([110, 5, 100]);
+            translate([130, -1, 94])
+                cube([110, 5, 100]);
+        }
+
 
 
 translate([90, 0, 0]) {
