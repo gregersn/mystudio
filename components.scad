@@ -3,7 +3,6 @@ use <materials.scad>;
 module support(width, depth) {
     // Calculate number of support beams
     beams = ceil(max(2, (width / 60) + 1));
-    echo(beams);
 
     translate([4.8, 0, 0])
     {
