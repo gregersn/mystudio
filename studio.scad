@@ -41,13 +41,14 @@ translate([5, 0, 0]) {
 }
 
 translate([210 + 4.8, 0, 0]) {
-    shelves();
+    shelves(120, 200, 50);
 }
 
-/*
-translate([352 - 61, 80, 80])
-    cube([60, 80, 1]);
-*/
 translate([350, 56, 180])
     rotate([0, 90, 0])
         cube([80, 100, 1]);
+
+
+translate([350, 346, 0])
+    rotate(180)
+        classhelve();
