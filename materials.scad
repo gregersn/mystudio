@@ -10,3 +10,20 @@ module twobytwo(length) {
     cube([length, 4.8, 4.8]);   
 }
 
+module lekt30x48(length) {
+    echo ("30x48: ", length);
+    color("Burlywood")
+    cube([length, 3.0, 4.8]);
+}
+
+module lekt36x48(length) {
+    echo ("36x48: ", length);
+    color("Burlywood")
+    cube([length, 4.8, 4.8]);
+}
+
+module lekt48x48(length) {
+    echo ("48x48: ", length);
+    color("Burlywood")
+    cube([length, 4.8, 4.8]);
+}
