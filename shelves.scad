@@ -4,12 +4,18 @@ use <components.scad>
 module shelves(width=120, height=200, depth=50) {
     translate([0, 0, 30])
         shelfwithbeams(width, depth);
-    translate([0, 0, 80])
+    translate([0, 0, 70])
         shelfwithbeams(width, depth);
-    translate([0, 0, 120])
+    translate([0, 0, 110])
+        shelfwithbeams(width, depth);
+    translate([0, 0, 150])
         shelfwithbeams(width, depth);
     translate([0, 0, 180])
         shelfwithbeams(width, depth);
+
+    translate([0, 0, 220])
+        shelfwithbeams(width, depth);
+
 
     translate([0, 9.8, 0])
         rotate([90, -90, 0]) {
