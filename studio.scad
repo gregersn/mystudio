@@ -1,6 +1,7 @@
 use <desk.scad>;
 use <printertable.scad>;
 use <shelves.scad>;
+use <longbench.scad>;
 
 module studio() {
     // Floor
@@ -35,7 +36,7 @@ module studio() {
 color("LightGray", 0.8)
     studio();
 
-translate([90, 0, 0]) {
+/*translate([90, 0, 0]) {
     desk();
     stuffondesk();
 }
@@ -51,8 +52,20 @@ translate([210 + 4.8, 0, 0]) {
 translate([350, 86, 180])
     rotate([0, 90, 0])
         cube([80, 80, 1]);
-
+*/
 
 translate([350, 346, 0])
     rotate(180)
         classhelve();
+
+
+translate([60, 0, 0])
+longbench(deskheight=90, benchlength=230);
+
+translate([60, 0, 0])
+rotate([0, 0, 90])
+    longbench(deskheight=90, benchlength=100, benchdepth=60);
+
+translate([60 + 230 + 60, 0, 0])
+rotate([0, 0, 90])
+longbench(deskheight=90, benchlength=160, benchdepth=60);
