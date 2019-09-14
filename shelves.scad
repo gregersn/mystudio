@@ -68,3 +68,57 @@ module classhelve() {
         classhelf();
 
 }
+
+module endpiece(height=200, depth=50) {
+    twobyfour(height);
+    translate([0, depth - 4.8, 0]) {
+        twobyfour(height);
+    }
+}
+
+module newshelf(width=120, depth=50, spacing=.5) {
+    pieces = floor(depth / (9.8 + spacing));
+    spacing = (depth - (pieces * 9.8)) / (pieces - 1);
+
+    rotate([0, 0, -90])
+    {
+        translate([-depth, 0, 0])
+        {
+            twobyfour(depth);
+            translate([0, 0, width - 9.8]) {
+                twobyfour(depth);
+            }
+        }
+    }
+    rotate([-90, -90, 0]) {
+        translate([0, 4.8, 0]) {
+            for(i=[0:pieces - 1]) {
+                translate([0, 0, i * (spacing + 9.8)]) {
+                    twobyfour(width);
+                }
+            }
+        }
+    }
+}
+
+module shelves2(width=120, height=200, depth=50, shelves=5, sections=1, bottomspace=30) {
+    translate([width, 0, 0]) {
+        shelfspacing = height / (shelves - 1);
+        rotate([0, -90, 0]) {
+            endpiece(height, depth);
+
+            translate([0, 0, width - 9.8]) {
+                endpiece(height, depth);
+            }
+
+            translate([bottomspace, 4.8, 0]) {
+                for(i=[0:shelves - 1]) {
+                    translate([i * (shelfspacing - 9.6), 0, 0])
+                    newshelf(width, depth - (2 * 4.8), 2);
+                }
+            }
+        }
+    }
+}
+
+shelves2(height=240);

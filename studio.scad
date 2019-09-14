@@ -45,8 +45,8 @@ translate([5, 0, 0]) {
     printertable();
 }
 
-translate([210 + 4.8, 0, 0]) {
-    shelves(120, 240, 80);
+translate([210 + 9.8, 0, 0]) {
+    shelves2(126, 220, 60, 6);
 }
 
 translate([350, 86, 180])
