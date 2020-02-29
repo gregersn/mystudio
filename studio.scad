@@ -58,7 +58,7 @@ translate([350, 346, 0])
     rotate(180)
         classhelve();
 
-/*
+
 translate([60, 0, 0])
 longbench(deskheight=90, benchlength=230);
 
@@ -68,4 +68,4 @@ rotate([0, 0, 90])
 
 translate([60 + 230 + 60, 0, 0])
 rotate([0, 0, 90])
-longbench(deskheight=90, benchlength=160, benchdepth=60);*/
+longbench(deskheight=90, benchlength=160, benchdepth=60);
